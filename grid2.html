@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            grid-template-areas:
+                "box1 box1 box2 box5"
+                "box3 box4 box2 box5"
+                ;
+        }
+
+        .container>div {
+            border: 1px solid;
+            background-color: grey;
+            border-radius: 10px;
+            color: azure;
+            font-weight: 700;
+            font-size: 40px;
+            padding: 40px;
+            
+        }
+
+        .container>div:nth-child(1) {
+            grid-area: box1;
+        }
+
+        .container>div:nth-child(2) {
+            grid-area: box2;
+        }
+
+        .container>div:nth-child(3) {
+            grid-area: box3;
+        }
+
+        .container>div:nth-child(4) {
+            grid-area: box4;
+        }
+
+        .container>div:nth-child(5) {
+            grid-area: box5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+    </div>
+</body>
+</html>
+
